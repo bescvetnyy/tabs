@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ru">
+<head>
+
+	<meta charset="utf-8">
+
+	<title>tabs</title>
+
+	<style>
+
+		/* scaffolding */
+
+		body {
+			margin: 0;
+			padding: 0;
+
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+			line-height: 1.5;
+
+			background-color: #f2f2f2;
+		}
+
+		.wrap {
+			width: 900px;
+			margin: 0 auto;
+			padding-top: 80px;
+		}
+
+		/**/
+
+		/* .tabs */
+
+		.tabs {
+			box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+		}
+
+			/* .tabs-nav */
+			
+			.tabs-nav {
+				display: flex;
+				padding: 5px 5px 0 5px;
+
+				color: #fff;
+
+				background-color: #393939;
+			}
+
+			.tabs-nav__item {
+				margin-right: 5px;
+				padding: 10px 20px;
+
+				cursor: pointer;
+
+				border-radius: 4px 4px 0 0;
+			}
+
+			.tabs-nav__item:last-child {
+				margin-right: none;
+			}
+
+			.tabs-nav__item:hover {
+				background-color: #ffffff20;
+			}
+
+			.tabs-nav__item:active {
+				font-weight: bold;
+				color: #393939;
+
+				background-color: #fff;
+			}
+
+			.tabs-nav__item_active {
+				font-weight: bold;
+				color: #393939;
+
+				background-color: #fff;
+			}
+
+			.tabs-nav__item_active:hover {
+				background-color: #fff;
+			}
+
+			/**/
+
+			/* .tabs-sort */
+
+			.tabs-sort {
+				font-size: 12px;
+			}
+
+			.review-sort {
+				display: none;
+			}
+
+			.tabs-sort__cont {
+				display: flex;
+				padding: 0 5px;
+
+				background-color: #fff;
+			}
+
+			.tabs-sort__item {
+				margin-right: 5px;
+				padding: 10px 20px;
+
+				cursor: pointer;
+			}
+
+			.tabs-sort__item:active {
+				font-weight: bold;
+			}
+
+			.tabs-sort__item_active {
+				font-weight: bold;
+			}
+
+			/**/
+
+		/**/
+
+	</style>
+
+</head>
+<body>
+
+	<div class="wrap">
+		<div class="tabs">
+			<div class="tabs-nav">
+				<div class="tabs-nav__item  tabs-nav__item_active  tabs-nav__item_video">Видео</div>
+				<div class="tabs-nav__item  tabs-nav__item_comment">Комментарии</div>
+				<div class="tabs-nav__item  tabs-nav__item_review">Отзывы</div>
+			</div>
+			<div class="tabs-sort">
+				<div class="video-sort">
+					<div class="tabs-sort__cont">
+						<div class="tabs-sort__item  tabs-sort__item_active  newest">Самые новые</div>
+						<div class="tabs-sort__item  oldest">Самые старые</div>
+					</div>
+				</div>
+				<div class="review-sort">
+					<div class="tabs-sort__cont">
+						<div class="tabs-sort__item  tabs-sort__item_active  helpful">Самые полезные</div>
+						<div class="tabs-sort__item  newest">Самые новые</div>
+						<div class="tabs-sort__item  oldest">Самые старые</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont">
+			
+		</div>
+	</div>
+	
+	<script>
+
+		
+		
+	</script>
+
+</body>
+</html>
