@@ -6,129 +6,7 @@
 
 	<title>tabs</title>
 
-	<style>
-
-		/* scaffolding */
-
-		body {
-			margin: 0;
-			padding: 0;
-
-			font-family: Arial, sans-serif;
-			font-size: 14px;
-			line-height: 1.5;
-
-			background-color: #f2f2f2;
-		}
-
-		.wrap {
-			width: 900px;
-			margin: 0 auto;
-			padding-top: 80px;
-		}
-
-		/**/
-
-		/* .tabs */
-
-		.tabs {
-			box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
-		}
-
-			/* .tabs-nav */
-			
-			.tabs-nav {
-				display: flex;
-				padding: 5px 5px 0 5px;
-
-				color: #fff;
-
-				background-color: #393939;
-			}
-
-			.tabs-nav__item {
-				margin-right: 5px;
-				padding: 10px 20px;
-
-				cursor: pointer;
-
-				border-radius: 4px 4px 0 0;
-			}
-
-			.tabs-nav__item:last-child {
-				margin-right: none;
-			}
-
-			.tabs-nav__item:hover {
-				background-color: #ffffff20;
-			}
-
-			.tabs-nav__item:active {
-				font-weight: bold;
-				color: #393939;
-
-				background-color: #fff;
-			}
-
-			.tabs-nav__item.active {
-				font-weight: bold;
-				color: #393939;
-
-				background-color: #fff;
-			}
-
-			.tabs-nav__item.active:hover {
-				background-color: #fff;
-			}
-
-			/**/
-
-			/* .tabs-sort */
-
-			.tabs-sort {
-				font-size: 12px;
-			}
-
-			.tabs-sort__item_review {
-				display: none;
-			}
-
-			.tabs-sort__cont {
-				display: flex;
-				padding: 0 5px;
-
-				background-color: #fff;
-			}
-
-			.sort-by__item {
-				margin-right: 5px;
-				padding: 10px 20px;
-
-				cursor: pointer;
-			}
-
-			.sort-by__item:active {
-				font-weight: bold;
-			}
-
-			.sort-by__item.active {
-				font-weight: bold;
-			}
-
-			/**/
-
-			/* .cont */
-
-			.cont-comment,
-			.cont-review {
-				display: none;
-			}
-
-			/**/
-
-		/**/
-
-	</style>
+	<link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
@@ -136,20 +14,20 @@
 	<div class="wrap">
 		<div class="tabs">
 			<div class="tabs-nav">
-				<div class="tabs-nav__item  tabs-nav__item_video  active">Видео</div>
-				<div class="tabs-nav__item  tabs-nav__item_comment">Комментарии</div>
-				<div class="tabs-nav__item  tabs-nav__item_review">Отзывы</div>
+				<div class="tabs-nav__item  tabs-nav__item_video  active" data-tab="cont-video">Видео</div>
+				<div class="tabs-nav__item  tabs-nav__item_comment" data-tab="cont-comment">Комментарии</div>
+				<div class="tabs-nav__item  tabs-nav__item_review" data-tab="cont-review">Отзывы</div>
 			</div>
 			<div class="tabs-sort">
-				<div class="tabs-sort__item  tabs-sort__item_video">
+				<div class="tabs-sort__item  tabs-sort__item_video  cont-video  active">
 					<div class="tabs-sort__cont  sort-by">
-						<div class="sort-by__item  active  newest">Самые новые</div>
+						<div class="sort-by__item  newest  active">Самые новые</div>
 						<div class="sort-by__item  oldest">Самые старые</div>
 					</div>
 				</div>
-				<div class="tabs-sort__item  tabs-sort__item_review">
+				<div class="tabs-sort__item  tabs-sort__item_review  cont-review">
 					<div class="tabs-sort__cont  sort-by">
-						<div class="sort-by__item  active  helpful">Самые полезные</div>
+						<div class="sort-by__item  helpful  active">Самые полезные</div>
 						<div class="sort-by__item  newest">Самые новые</div>
 						<div class="sort-by__item  oldest">Самые старые</div>
 					</div>
@@ -157,25 +35,19 @@
 			</div>
 		</div>
 		<div class="cont">
-			<div class="cont-video">
+			<div class="cont__item  cont-video  active">
 				video
 			</div>
-			<div class="cont-comment">
+			<div class="cont__item  cont-comment">
 				comment
 			</div>
-			<div class="cont-review">
+			<div class="cont__item  cont-review">
 				review
 			</div>
 		</div>
 	</div>
-	
-	<script>
 
-		(() => {
-			
-		})();
-		
-	</script>
+	<script src="js/main.js"></script>
 
 </body>
 </html>
